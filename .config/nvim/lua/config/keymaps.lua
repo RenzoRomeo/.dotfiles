@@ -27,3 +27,6 @@ map("n", "gca", "<cmd>Lspsaga code_action<cr>")
 -- Center search results
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
+
+-- Search TODOs
+map("n", "<leader>tt", "<cmd>TodoTelescope<cr>")
