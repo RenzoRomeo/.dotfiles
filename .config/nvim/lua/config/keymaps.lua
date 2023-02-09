@@ -31,3 +31,6 @@ map("n", "N", "Nzzzv")
 
 -- Search TODOs
 map("n", "<leader>tt", "<cmd>TodoTelescope<cr>")
+
+-- Spectre (Search and replace)
+map("n", "<leader>sr", "<cmd>Spectre<cr>")
