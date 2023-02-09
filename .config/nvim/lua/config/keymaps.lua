@@ -13,6 +13,7 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
 map("n", "<leader>sf", "<cmd>Telescope find_files<cr>")
 map("n", "<leader>sg", "<cmd>Telescope live_grep<cr>")
 map("n", "<leader>sb", "<cmd>Telescope buffers<cr>")
+map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>")
 
 -- LazyGit
 map("n", "<leader>lg", "<cmd>LazyGit<cr>")
