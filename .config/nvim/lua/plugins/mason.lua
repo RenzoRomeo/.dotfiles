@@ -50,5 +50,13 @@ return {
               }
           }
       })
+
+      lspconfig["pyright"].setup({
+          on_attach = on_attach,
+          settings = {
+              venvPath = ".",
+              venv = "venv"
+          }
+      })
     end
 }

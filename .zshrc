@@ -119,3 +119,9 @@ alias lg="lazygit"
 # Java env variables
 export JAVA_HOME="/usr/local/jdk-19.0.2"
 export PATH="$JAVA_HOME/bin:$PATH"
+
+# Add ROCm binaries to PATH
+export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bin/
+
+# CMake path
+export PATH=$PATH:/opt/cmake/bin

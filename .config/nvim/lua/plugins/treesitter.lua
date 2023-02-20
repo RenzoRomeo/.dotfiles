@@ -9,6 +9,14 @@ return {
           autotag = {
               enable = true
           },
+          highlight = {
+              enable = true
+          },
+      })
+      vim.filetype.add({
+          extension = {
+              astro = "astro",
+          }
       })
     end
 }
