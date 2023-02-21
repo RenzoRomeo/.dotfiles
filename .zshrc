@@ -125,3 +125,6 @@ export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bin/
 
 # CMake path
 export PATH=$PATH:/opt/cmake/bin
+
+# Rust-analyzer path
+export PATH=$PATH:/home/renzo/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/
