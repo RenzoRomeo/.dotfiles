@@ -80,3 +80,17 @@
 
 (require 'org-download)
 (add-hook 'dired-mode-hook 'org-download-enable)
+
+;; accept completion from copilot and fallback to company
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (("C-TAB" . 'copilot-accept-completion-by-word)
+         ("C-<tab>" . 'copilot-accept-completion-by-word)
+         :map copilot-completion-map
+         ("<tab>" . 'copilot-accept-completion)
+         ("TAB" . 'copilot-accept-completion)))
+
+(use-package! tsx-mode
+        :config
+        (setq auto-mode-alist (delete '("\\.tsx\\'" . typescript-tsx-mode) auto-mode-alist))
+        (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-mode)))

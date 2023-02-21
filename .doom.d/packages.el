@@ -50,3 +50,12 @@
 ;(unpin! t)
 
 (package! tldr)
+
+
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+
+(package! tsi :recipe (:host github :repo "orzechowskid/tsi.el" :branch "main"))
+(package! coverlay)
+(package! origami)
+(package! tsx-mode :recipe (:host github :repo "orzechowskid/tsx-mode.el" :branch "master"))
