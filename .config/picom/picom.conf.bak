@@ -1,0 +1,29 @@
+corner-radius = 5.0;
+shadow = true;
+
+blur: {
+  method = "kernel";
+  strength = 9;
+  background = false;
+  background-frame = false;
+  background-fixed = false;
+}
+
+experimental-backends = true;
+backend = "glx";
+
+opacity-rule = [
+  "90:class_g = 'Alacritty' && focused",
+  "80:class_g = 'Alacritty' && !focused"
+];
+
+wintypes:
+{
+ dock = { shadow = false; };
+ dnd = { shadow = false; };
+ tooltip = { shadow = false; };
+ menu        = { opacity = false; };
+ dropdown_menu = { opacity = false; };
+ popup_menu    = { opacity = false; };
+ utility       = { opacity = false; };
+};
