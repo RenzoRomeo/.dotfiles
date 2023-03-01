@@ -5,6 +5,9 @@ return {
           enable = true,
           -- extra_groups = { "NvimTreeNormal", "FloatBorder" },
           extra_groups = "all",
+          exclude = {
+              "Visual"
+          }
       })
     end,
 }
