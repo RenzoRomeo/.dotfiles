@@ -128,3 +128,5 @@ export PATH=$PATH:/opt/cmake/bin
 
 # Rust-analyzer path
 export PATH=$PATH:/home/renzo/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
