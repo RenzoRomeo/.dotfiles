@@ -130,3 +130,19 @@ export PATH=$PATH:/opt/cmake/bin
 export PATH=$PATH:/home/renzo/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/renzo/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/renzo/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/renzo/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/renzo/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
