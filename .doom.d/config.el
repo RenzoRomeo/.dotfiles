@@ -90,7 +90,15 @@
          ("<tab>" . 'copilot-accept-completion)
          ("TAB" . 'copilot-accept-completion)))
 
+;; enable copilot for all programming modes
 (use-package! tsx-mode
         :config
         (setq auto-mode-alist (delete '("\\.tsx\\'" . typescript-tsx-mode) auto-mode-alist))
         (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-mode)))
+
+;; custom directory for org-download
+(setq-default org-download-image-dir "./images")
+
+;; org agenda
+(after! org
+  (setq org-agenda-files '("~/notes/agenda.org")))
