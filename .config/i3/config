@@ -199,3 +199,5 @@ bar {
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
+
+bindsym $mod+Shift+s exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
