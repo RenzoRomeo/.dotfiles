@@ -18,3 +18,5 @@ vim.opt.scrolloff = 8 -- Scroll with 8 lines padding
 -- Persist undo
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
+
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
