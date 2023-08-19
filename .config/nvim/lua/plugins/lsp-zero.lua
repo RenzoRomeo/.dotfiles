@@ -14,6 +14,7 @@ return {
   },
   config = function()
     local lsp = require('lsp-zero').preset({})
+
     lsp.on_attach(function(client, bufnr)
       local opts = { buffer = bufnr, remap = false }
 
@@ -23,9 +24,25 @@ return {
       vim.keymap.set("n", "gca", function() vim.lsp.buf.code_action() end, opts)
       vim.keymap.set("n", "gr", function() vim.lsp.buf.rename() end, opts)
 
+
+      -- Autocomplete bindings
+      local cmp = require("cmp")
+      local cmp_select = { behavior = cmp.SelectBehavior.Select }
+      local cmp_mappings = lsp.defaults.cmp_mappings({
+        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+        ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-Space>"] = cmp.mapping.complete()
+      })
+
+      lsp.setup_nvim_cmp({
+        mapping = cmp_mappings
+      })
+
       -- Format on save
       vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
     end)
+
     lsp.setup()
   end
 }
