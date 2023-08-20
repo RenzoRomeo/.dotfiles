@@ -7,5 +7,8 @@ return {
     highlight = {
       enable = true
     }
-  }
+  },
+  config = function()
+    vim.cmd [[TSEnable highlight]]
+  end
 }
